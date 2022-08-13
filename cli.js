@@ -26,7 +26,10 @@ const createReactComponent = async () => {
     },
   ])
 
-  const isNameIsKebabCase = name.split('').every(letter => letter !== letter.toUpperCase())
+  const isNameIsKebabCase = name.split('').every(letter => {
+    if (letter === '-') return true
+    return letter !== letter.toUpperCase()
+  })
 
   // creating folder and files
   fs.mkdirSync(`${path}/${name}`, { recursive: true }, (err) => {
