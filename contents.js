@@ -46,7 +46,7 @@ export default use${notKebabCase}
   `
 }
 
-const indexContent = (name) => `import { default } from "./${name}"`
+const indexContent = (name) => `export { default } from "./${name}"`
 
 
 const testContent = (name) => {
