@@ -1,21 +1,27 @@
 {
-  "name": "react-folders-cli",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "name": "generate-react-component-cli",
+  "version": "1.1.2",
+  "description": "Quickly create a react component with command line",
+  "main": "cli.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "node cli.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "fs": "^0.0.1-security",
-    "inquirer": "^8.0.0",
-    "mkdirp": "^1.0.4",
-    "nodemon": "^2.0.19",
-    "path": "^0.12.7",
-    "shelljs": "^0.8.5",
-    "store-js": "^2.0.4"
-  }
+    "inquirer": "^8.0.0"
+  },
+  "bin": {
+    "grccli": "./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stanislawsztrajt/generate-react-component-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/stanislawsztrajt/generate-react-component-cli/issues"
+  },
+  "homepage": "https://github.com/stanislawsztrajt/generate-react-component-cli#readme"
 }

@@ -1,10 +1,12 @@
+#!/usr/bin/env node
+
 const inquirer = require('inquirer');
 const fs = require('fs');
 const contents = require('./contents')
 const helpers = require('./helpers')
 
 const createReactComponent = async () => {
-  console.log("\x1b[32m", 'React CLI components', "\x1b[37m");
+  console.log("\x1b[32m", 'Generate React Component CLI', "\x1b[37m");
   let fileExtension = helpers.readFileExtension()
   if (!fileExtension) {
     fileExtension = await helpers.fetchProgramingLanguage()
