@@ -16,12 +16,12 @@ const createReactComponent = async () => {
   const { name, path } = await inquirer.prompt([
     {
       name: 'name',
-      message: 'Folder and file name:',
+      message: 'Component name:',
       default: 'name'
     },
     {
       name: 'path',
-      message: 'Path of folder: ',
+      message: 'Path of component: ',
       default: './'
     },
   ])
@@ -32,14 +32,20 @@ const createReactComponent = async () => {
   fs.mkdirSync(`${path}/${name}`, { recursive: true }, (err) => {
     if (err) console.log('Wrong path!');
   })
+  // index.ts
   fs.writeFileSync(`${path}/${name}/index${fileExtension}`, contents.indexContent(name))
-  fs.writeFileSync(`${path}/${name}/${name}${fileExtension}x`, contents.hookContent(name))
+
+  // component.tsx
+  fs.writeFileSync(`${path}/${name}/${name}${fileExtension}x`, contents.componentContent(name))
+
+  // component.test.tsx
   fs.writeFileSync(`${path}/${name}/${name}.test${fileExtension}x`, contents.testContent(name))
-  
+
+  // use-component.ts or component.hook.ts
   if (isNameIsKebabCase)
-    fs.writeFileSync(`${path}/${name}/use-${name}${fileExtension}`, contents.componentContent(name))
+    fs.writeFileSync(`${path}/${name}/use-${name}${fileExtension}`, contents.hookContent(name))
   else
-    fs.writeFileSync(`${path}/${name}/${name}.hook${fileExtension}`, contents.componentContent(name))
+    fs.writeFileSync(`${path}/${name}/${name}.hook${fileExtension}`, contents.hookContent(name))
 
   // set green color
   console.log("\x1b[32m", 'Created!');

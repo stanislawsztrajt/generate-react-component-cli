@@ -30,7 +30,7 @@ const readFileExtension = () => {
 }
 
 const logInfos = () => {
-  console.log("\x1b[36m", 'It will generate (E.g for folder name task-item and path src/features): ');
+  console.log("\x1b[36m", 'It will generate (E.g for component name task-item and path src/features): ');
   console.log(' Folder: src/features/task-item');
   console.log(' File: src/features/task/task-item.tsx');
   console.log(' File: src/features/task/use-task-item.ts (or Task.hook.ts, it depends if folder and file name is kebab case or no)');

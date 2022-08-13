@@ -11,7 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "fs": "^0.0.1-security",
-    "inquirer": "^8.0.0"
+    "inquirer": "^8.0.0",
+    "readme-md-generator": "^1.0.0"
   },
   "bin": {
     "grccli": "./cli.js"
