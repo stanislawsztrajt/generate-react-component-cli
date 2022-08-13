@@ -30,6 +30,15 @@ npm i -g generate-react-component-cli
 grccli
 ```
 
+After typing "grccli" the language selection will be displayed(the language selection is one-time only) after that the application only asks you what you want the componoent to be called and where you want it to be located. After that the component will be created!
+
+It will generate (E.g for component name task-item and path src/features):
+Folder: src/features/task-item;
+File: src/features/task/task-item.tsx'
+File: src/features/task/use-task-item.ts (or Task.hook.ts, it depends if folder and file name is kebab case or no)'
+File: src/features/task/task-item.test.tsx'
+File: src/features/task/index.ts'
+
 ## Author
 
 👤 **Stanisław Sztrajt**

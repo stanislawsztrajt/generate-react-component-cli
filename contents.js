@@ -38,7 +38,7 @@ export default ${notKebabCase}
 const hookContent = (name) => {
   const notKebabCase = nameInNotKebabCase(name)
 
-  return `const ${notKebabCase} = () => {
+  return `const use${notKebabCase} = () => {
   return {}
 }
 
@@ -47,6 +47,7 @@ export default ${notKebabCase}
 }
 
 const indexContent = (name) => `import { default } from "./${name}"`
+
 
 const testContent = (name) => {
   const notKebabCase = nameInNotKebabCase(name)
