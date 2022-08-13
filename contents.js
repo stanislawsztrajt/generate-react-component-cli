@@ -42,7 +42,7 @@ const hookContent = (name) => {
   return {}
 }
 
-export default ${notKebabCase}
+export default use${notKebabCase}
   `
 }
 

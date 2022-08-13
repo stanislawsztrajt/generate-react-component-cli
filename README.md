@@ -39,6 +39,11 @@ File: src/features/task/use-task-item.ts (or Task.hook.ts, it depends if folder 
 File: src/features/task/task-item.test.tsx <br />
 File: src/features/task/index.ts <br />
 
+This is really easy to edit, 3 files <br />
+  helpers.js - helpers functions <br /> 
+  contents.js - contents files <br /> 
+  cli.js - application <br />
+
 ## Author
 
 👤 **Stanisław Sztrajt**
