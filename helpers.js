@@ -1,7 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const programingLanguagePath = './programing-language.txt'
+var LocalStorage = require('node-localstorage').LocalStorage
+localStorage = new LocalStorage('./scratch');
 
 const fetchProgramingLanguage = async () => {
   const { programingLanguage } = await inquirer.prompt([
@@ -15,18 +16,13 @@ const fetchProgramingLanguage = async () => {
 
   const fileExtension = `${programingLanguage === 'javascript' ? '.js' : '.ts'}`
 
-  fs.writeFileSync(
-    'programing-language.txt',
-    fileExtension
-  )
-  global.programingLanguage = fileExtension
+  localStorage.setItem('programingLanguage', fileExtension)
+
   return fileExtension
 }
 
 const readFileExtension = () => {
-  if (fs.existsSync(programingLanguagePath)) {
-    return String(fs.readFileSync(programingLanguagePath))
-  }
+  return localStorage.getItem('programingLanguage')
 }
 
 const logInfos = () => {
