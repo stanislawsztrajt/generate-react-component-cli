@@ -52,7 +52,8 @@ const indexContent = (name) => `export { default } from "./${name}"`
 const testContent = (name) => {
   const notKebabCase = nameInNotKebabCase(name)
   
-  return `import { render } from '@testing-library/react';
+  return `import React from 'react';
+import { render } from '@testing-library/react';
 import ${notKebabCase} from './${name}';
 
 test('should render ${notKebabCase}', () => {
